@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro@3.4.0/styles/index.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro@3.4.0/index.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.6/Sortable.min.js"
+      defer
+    ></script>
+    <script src="js/main-functions.js" defer></script>
+    <title>Document</title>
+  </head>
+
+  <body>
+    <header class="header-container">
+      <h1 class="web-title">Daily Planner</h1>
+    </header>
+    <main class="main-container">
+      <div class="tasks-main-container">
+        <div id="tasksInputContainer" class="tasks-input-container">
+          <h2>Create Task</h2>
+          <label for="titleText">Title</label>
+          <input type="text" id="titleText" placeholder="Enter a task title" />
+          <label for="descriptionText">Description</label>
+          <textarea
+            id="descriptionText"
+            placeholder="Describe your task"
+          ></textarea>
+
+          <div class="configuration-input">
+              <label for="calendarSetDueDate">Due date</label>
+              <input
+                id="calendarSetDueDate"
+                type="text"
+                placeholder="Select a due date"
+                readonly
+              />
+              <label for="importanceSelection">Importance</label>
+              <select id="importanceSelection">
+                <option value="#ffcece">High</option>
+                <option value="#ffebaf">Medium</option>
+                <option value="#d4e6ff" selected>Low</option>
+              </select>
+          </div>
+          <button id="addBtn">Add new Task</button>
+        </div>
+        <div id="tasksDisplayContainer" class="tasks-display-container">
+          <h2>Todays Tasks</h2>
+          <p id="noTasks">No tasks for today</p>
+          <ul id="tasksList" class="tasks-list">
+            <li>
+              <span id="title" class="task-title"><b>Example Task</b></span>
+              <span id="description" class="task-description"
+                >description of the task</span
+              >
+            </li>
+            <li>
+              <span id="title" class="task-title"><b>Example Task 2</b></span>
+              <span id="description" class="task-description"
+                >description of the task</span
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="calendar" class="calendar-container">
+        <!--calendar inserted by js-->
+      </div>
+    </main>
+  </body>
+</html>
