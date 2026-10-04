@@ -154,14 +154,15 @@ const listElementCreation = (task) => {
   taskContent.classList.add("task-content");
 
   //Addinf functionality to the checkbox
-  completeChackbox.addEventListener("change", () => removeFromList(task));
+  completeChackbox.addEventListener("change", () => markAsDone(newItem));
 
   //Adding the new item to the list
   tasksList.appendChild(newItem);
 };
 
-const removeFromList = (task) => {
-  console.log(task);
+const markAsDone = (newItem) => {
+  console.log(newItem);
+  newItem.classList.toggle("mark-item-as-done")
 };
 
 const main = () => {

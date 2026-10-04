@@ -172,10 +172,6 @@ li {
     font-weight: bold;
 }
 
-.task-description {
-    
-}
-
 h2 {
     color: white;
 }
@@ -189,6 +185,9 @@ h2 {
 }
 
 .mark-item-as-done {
-    cursor: pointer;   
+    cursor: pointer;
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+    text-decoration-color: black;
 }
 
